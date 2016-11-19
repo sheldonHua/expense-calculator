@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Expense Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Expense Calculator</h1>
+		<p>Enter your expenses (ex: Hydro, gas, internet, grocery etc) and select a occurrence</p>
+
+		<div class="form-container">
+			<form class="bill-form">
+				<input class="form-input" type="text" placeholder="Expense" name="billName">	
+				<input class="form-input" type="text" placeholder="Cost" name="billTotal" onkeypress="return isNumberKey(event)"><span class="per"></span>	
+				<select class="cycle">
+				  <option value="select">Select</option>
+				  <option value="once">One time</option>
+				  <option value="weekly">Weekly</option>
+				  <option value="biweekly">Bi-weekly</option>
+				  <option value="monthly">Monthly</option>
+				  <option value="quarterly">Quarterly</option>
+				</select>
+
+				<span class="yearlyTotal"><span class="value">&nbsp;</span></span>
+	   		 </form> 
+		</div>
+
+		<button class="add">Add Another Expense</button>
+
+	</div>
+	<footer class="footer">
+		<p class="totalExpense">Total Yearly Expense:<br><span class="totalYearly">$0</span></p>
+		
+	</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts1.js"></script>
+</body>
+</html>
